@@ -1,7 +1,24 @@
 import React from 'react';
 import Logo from '../../Assets/logo.svg'
 import LoginSVG from '../../Assets/login.svg'
-import { DivHeader, NavUl, NavLi, ImgLogo, DivImg, ANav, Login, Call, LoginSVGIMG, LoginSpan } from './styles';
+import WhatsApp from '../../Assets/whatsapp.svg'
+import {
+    DivHeader,
+    NavUl,
+    NavLi,
+    ImgLogo,
+    DivImg,
+    ANav,
+    Login,
+    Call,
+    LoginImg,
+    LoginSpan,
+    WhatsAppImg,
+    Divider,
+    DivRight,
+    WhatsAppText,
+    ButtonWhatsApp
+} from './styles';
 
 function Header() {
     return (
@@ -19,13 +36,18 @@ function Header() {
                 <NavLi><ANav href="#">QuandoViajar</ANav></NavLi>
                 <NavLi><ANav href="#">Atendimento</ANav></NavLi>
             </NavUl>
+            <DivRight>
             <Login>
                 <LoginSpan>Entrar </LoginSpan>
-                <LoginSVGIMG src={LoginSVG} alt='login' />
+                <LoginImg src={LoginSVG} alt='login' />
             </Login>
+            <Divider />
             <Call>
-
+                <WhatsAppImg src={WhatsApp} alt='whatsAppIcone' />
+                <WhatsAppText>Ligue</WhatsAppText>
+                <ButtonWhatsApp />
             </Call>
+            </DivRight>
         </DivHeader >
     );
 }

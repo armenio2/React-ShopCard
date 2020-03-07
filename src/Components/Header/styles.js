@@ -2,12 +2,14 @@ import styled from 'styled-components';
 
 export const DivHeader = styled.div`
     width: 100%;
+    margin: auto;
+    display: inline;
 `;
 
 export const NavUl = styled.ul`
     display: inline;
     float: left;
-    width: 65.47619048%;
+    width: 65%;
     text-align: left;
     white-space: nowrap;
     margin: 0;
@@ -37,7 +39,7 @@ export const ImgLogo = styled.img`
 export const DivImg = styled.div`
     display: inline;
     float: left;
-    width: 11.30952381%;
+    width: 10%;
     margin: 10px .5952381% 0 10px;
 `;
 
@@ -72,15 +74,29 @@ export const Login = styled.div`
 `;
 
 export const Call = styled.div`
-    width: auto;
-    padding: 0 16px 0 12px;
+    width: 90px;
+    padding: 2px 16px 0 12px;
     font-size: 16px;
     height: 47px;
     color: #555;
-    margin: 0;
+    margin: auto;
+    display: inline-flex;
+    &:hover{
+        svg{
+            fill: #0064bf;
+        }
+        span{
+            color: #0064bf;
+        }
+        span:nth-of-type(2){
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid #0064bf;
+        }
+    }
 `;
 
-export const LoginSVGIMG = styled.img`
+export const LoginImg = styled.img`
     width: 16px;
     height: 16px
 `;
@@ -89,4 +105,43 @@ export const LoginSpan = styled.span`
     color: #0064bf;
     font: 600 12px/1.2em ProximaNova-Bold;
     margin-right: 8px;
+`;
+
+export const WhatsAppImg = styled.svg`
+    width: 21px;
+    height: 21px;
+    float: left;
+    margin-right: 5px;
+    margin-top: 19px;
+`;
+
+export const Divider = styled.span`
+    width: 1px;
+    height: 25px;
+    display: block;
+    content: "";
+    background: #DDD;
+    margin-top: 16px;
+`;
+
+export const DivRight = styled.div`
+    width: auto; 
+    display: inline-flex;
+`;
+
+export const WhatsAppText = styled.span`
+    margin-right: 5px;
+    margin-top: 23px;
+    font-size: 16px;
+    color: #555;
+`;
+
+export const ButtonWhatsApp = styled.span`
+    margin-right: 8px;
+    margin-top: 30px;
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #555;
 `;
