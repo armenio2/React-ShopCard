@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Logo from '../../Assets/logo.svg'
 import LoginSVG from '../../Assets/login.svg'
 import WhatsApp from '../../Assets/whatsapp.svg'
+import WhatsAppBlue from '../../Assets/whatsapp-blue.svg'
 import {
     DivHeader,
     NavUl,
@@ -21,13 +22,13 @@ import {
 } from './styles';
 
 function Header() {
+    const [hover, setHover] = useState(false)
     return (
         <DivHeader>
             <DivImg>
                 <ImgLogo src={Logo} alt='logoViajaNet' />
             </DivImg>
             <NavUl>
-                <NavLi><ANav href="#">Black Friday</ANav></NavLi>
                 <NavLi><ANav href="#">Passagens Aéreas</ANav></NavLi>
                 <NavLi><ANav href="#">Pacotes de Viagem</ANav></NavLi>
                 <NavLi><ANav href="#">Hotéis</ANav></NavLi>
@@ -42,8 +43,11 @@ function Header() {
                 <LoginImg src={LoginSVG} alt='login' />
             </Login>
             <Divider />
-            <Call>
-                <WhatsAppImg src={WhatsApp} alt='whatsAppIcone' />
+            <Call onMouseEnter={()=> setHover(true)} onMouseLeave={()=>setHover(false)}>
+                    <WhatsAppImg 
+                    src={hover ? WhatsAppBlue: WhatsApp} 
+                    alt='whatsAppIcone' 
+                    />
                 <WhatsAppText>Ligue</WhatsAppText>
                 <ButtonWhatsApp />
             </Call>

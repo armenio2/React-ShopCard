@@ -1,9 +1,17 @@
 import styled from 'styled-components';
-
+import NovaFont from '../../Assets/ProximaNova-Bold_gdi.woff'
+import { createGlobalStyle } from 'styled-components';
 export const DivHeader = styled.div`
     width: 100%;
     margin: auto;
     display: inline;
+`;
+
+export default createGlobalStyle`
+    @font-face {
+        url(${NovaFont}) format('woff'),
+        font-style: normal;
+    }
 `;
 
 export const NavUl = styled.ul`
@@ -47,7 +55,7 @@ export const ANav = styled.a`
     width: auto;
     height: 60px;
     font-family: ProximaNova-Semibold,proxima-nova,Arial;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 14px;
     line-height: 60px;
     padding: 0;
@@ -82,9 +90,6 @@ export const Call = styled.div`
     margin: auto;
     display: inline-flex;
     &:hover{
-        svg{
-            fill: #0064bf;
-        }
         span{
             color: #0064bf;
         }
@@ -107,7 +112,7 @@ export const LoginSpan = styled.span`
     margin-right: 8px;
 `;
 
-export const WhatsAppImg = styled.svg`
+export const WhatsAppImg = styled.img`
     width: 21px;
     height: 21px;
     float: left;
@@ -130,6 +135,8 @@ export const DivRight = styled.div`
 `;
 
 export const WhatsAppText = styled.span`
+    font-family: ProximaNova-Semibold,proxima-nova,Arial;
+    font-weight: 500px;
     margin-right: 5px;
     margin-top: 23px;
     font-size: 16px;
