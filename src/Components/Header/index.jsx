@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Logo from '../../Assets/logo.svg'
 import LoginSVG from '../../Assets/login.svg'
 import WhatsApp from '../../Assets/whatsapp.svg'
@@ -38,19 +38,19 @@ function Header() {
                 <NavLi><ANav href="#">Atendimento</ANav></NavLi>
             </NavUl>
             <DivRight>
-            <Login>
-                <LoginSpan>Entrar </LoginSpan>
-                <LoginImg src={LoginSVG} alt='login' />
-            </Login>
-            <Divider />
-            <Call onMouseEnter={()=> setHover(true)} onMouseLeave={()=>setHover(false)}>
-                    <WhatsAppImg 
-                    src={hover ? WhatsAppBlue: WhatsApp} 
-                    alt='whatsAppIcone' 
+                <Login>
+                    <LoginSpan>Entrar </LoginSpan>
+                    <LoginImg src={LoginSVG} alt='login' />
+                </Login>
+                <Divider />
+                <Call onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+                    <WhatsAppImg
+                        src={hover ? WhatsAppBlue : WhatsApp}
+                        alt='whatsAppIcone'
                     />
-                <WhatsAppText>Ligue</WhatsAppText>
-                <ButtonWhatsApp />
-            </Call>
+                    <WhatsAppText>Ligue</WhatsAppText>
+                    <ButtonWhatsApp />
+                </Call>
             </DivRight>
         </DivHeader >
     );

@@ -1,12 +1,6 @@
 import styled from 'styled-components';
 import NovaFont from '../../Assets/ProximaNova-Bold_gdi.woff'
 import { createGlobalStyle } from 'styled-components';
-export const DivHeader = styled.div`
-    width: 100%;
-    margin: auto;
-    display: inline;
-`;
-
 export default createGlobalStyle`
     @font-face {
         url(${NovaFont}) format('woff'),
@@ -14,13 +8,20 @@ export default createGlobalStyle`
     }
 `;
 
+export const DivHeader = styled.div`
+    width: 100%;
+    margin: auto;
+    display: inline;
+`;
+
+
 export const NavUl = styled.ul`
     display: inline;
     float: left;
-    width: 65%;
+    width: 45%;
     text-align: left;
     white-space: nowrap;
-    margin: 0;
+    margin: 0 0 0 5%;
     list-style: none;
 `;
 
@@ -38,8 +39,7 @@ export const NavLi = styled.li`
 `;
 
 export const ImgLogo = styled.img`
-    position: relative;
-    z-index: 2;
+    float: right;
     max-width: 100%;
     display: inline-block;
 `;
@@ -47,8 +47,8 @@ export const ImgLogo = styled.img`
 export const DivImg = styled.div`
     display: inline;
     float: left;
-    width: 10%;
-    margin: 10px .5952381% 0 10px;
+    width: 15%;
+    margin: 10px 0 0 5%;
 `;
 
 export const ANav = styled.a`
@@ -130,6 +130,7 @@ export const Divider = styled.span`
 `;
 
 export const DivRight = styled.div`
+    width: 20%;
     width: auto; 
     display: inline-flex;
 `;
